@@ -1,0 +1,17 @@
+extends includes/template/base.pug
+
+block variables
+  - var title = "Главная";
+  - var baseSrc = 'static/img/';
+
+block main
+
+  +b('section').video-back
+    +e('video')(autoplay muted="muted" preload="auto" playsinline="" loop="loop" poster="static/video/video-back-poster.jpg").video-item
+      source(src="static/video/video-back.mp4" type="video/mp4")
+
+  +b('section').ihead
+    +e.container
+      +e.pattern
+        include ../img/pattern.svg
+      +e('h1').title Юридическая помощь по уголовным делам в сфере экономики

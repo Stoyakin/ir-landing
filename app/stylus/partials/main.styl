@@ -1,0 +1,106 @@
+.main
+  display flex
+  align-items flex-start
+  min-height calc(100vh - 425px)
+  @media $desktopMax
+    &:after
+      content ''
+      display block
+      position fixed
+      top 0
+      left 0
+      width 100vw
+      height 100%
+      background-color rgba(#000, 0.25)
+      transition opacity .5s, visibility .5s
+      opacity 0
+      visibility hidden
+      z-index 14
+  &__aside
+    position fixed
+    left 0
+    top 0
+    display flex
+    flex-direction column
+    width 263px
+    height 100vh
+    min-height 600px
+    padding 60px 30px 60px 47px
+    background-color white
+    box-shadow 0 0 16px rgba(0, 0, 0, 0.14)
+    transition left .5s ease-in-out
+    z-index 16
+    @media (max-width: 1366px)
+      width 230px
+      padding 40px 20px 40px 30px
+    @media $desktopMax
+      left -300px
+      &.show
+        left 0
+    .nav
+      margin-top 181px
+      @media $mLandscapeMax
+        margin-top 60px
+  &__content
+    width 100%
+    padding-bottom 89px
+  &__title
+    color $black
+    font-size 40px
+    line-height 46px
+    font-weight 500
+    letter-spacing .025em
+    margin-bottom 29px
+    @media $mPortraitMax
+      font-size 36px
+      line-height 42px
+  &__row
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+  &__left
+    width calc(75% - 15px)
+    @media $tPortraitMax
+      width 100%
+      order 1
+  &__right
+    width calc(25% - 15px)
+    @media $tPortraitMax
+      order 1
+      width 100%
+      margin-top 35px
+    &--first-mobile
+      @media $tPortraitMax
+        order 0
+        margin-top 0
+        margin-bottom 25px
+    .specialists
+      max-width 302px
+      margin-left auto
+      @media $tPortraitMax
+        margin-left 0
+  &__nav
+    background-color whitesmoke
+    padding 36px 39px
+    @media $tPortraitMax
+      padding 25px 25px 10px
+    &-list
+      @media $tPortraitMax
+        display flex
+        flex-wrap wrap
+      &-item
+        margin-bottom 14px
+        &:last-child
+          margin-bottom 0
+          margin-right 0
+        @media $tPortraitMax
+          margin-right 20px
+          &:last-child
+            margin-bottom 14px
+      &-href
+        color $black
+        font-size 16px
+        line-height 18px
+        transition color .4s
+        &:hover, &--active
+          color $green

@@ -1,0 +1,6 @@
+mixin video-btn(titleBnt)
+  +b('a')(href="#").btn.btn--video&attributes(attributes) 
+    +e('span').title #{titleBnt}
+    +e('span').video-wrap
+      +e('video')(autoplay muted="muted" preload="auto" playsinline="" loop="loop" poster="static/video/video-btn-poster.jpg").video-item
+        source(src="static/video/video-btn.mp4" type="video/mp4")

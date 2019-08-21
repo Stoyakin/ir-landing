@@ -1,0 +1,52 @@
+*
+  box-sizing border-box
+
+img
+  max-width 100%
+
+a
+  text-decoration none
+
+html
+  font-size $baseFontSize
+
+html, body, .wrapper
+  position relative
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  -webkit-font-smoothing antialiased
+  text-rendering optimizeLegibility !important
+
+body
+  min-width 320px
+  margin 0
+  padding 0
+  font-family $baseFontFamily
+  font-weight $baseFontWeight
+  overflow-x hidden
+
+  &.blocked, &.open-menu
+    overflow hidden
+    -ms-touch-action none
+    touch-action none
+
+  &.open-menu
+    .main
+      &:after
+        opacity 1
+        visibility visible
+
+  &.page-loaded
+    .wrapper, .header, .main, .footer
+      opacity 1
+
+.wrapper, .header, .main, .footer
+  opacity 0
+  transition opacity .4s ease-in
+
+.wrapper
+  position relative
+  width 100%
+  min-height 100vh
+  overflow-x hidden
+  z-index 1

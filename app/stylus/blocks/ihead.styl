@@ -3,7 +3,7 @@
   flex-direction column
   position relative
   width 100%
-  height 100vh
+  height calc(100vh - 101px)
   &__container
     display flex
     width 100%
@@ -14,14 +14,15 @@
     padding-top 15vh
     padding-bottom 10vh
   &__pattern
-    width 53vw
-    height 49vh
-    margin-bottom 11vh
+    position absolute
+    left 0
+    top 0
+    width 100vw
+    height 100vh
     svg
-      @extend .centerPos
-      width 100vw
-      height 100vh
-      user-select none
+      display block
+      width 100%
+      height 100%
   &__title
     position relative
     color $black
@@ -29,7 +30,8 @@
     font-weight 600
     line-height 64px
     max-width 750px
-    margin-left -23vw
-    margin-top 35vh
+    margin-left auto
+    margin-top 42vh
+    margin-right 6vw
     z-index 1
 

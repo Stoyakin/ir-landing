@@ -6,6 +6,8 @@
   padding 8px 20px 9px
   border-radius 21px
   background none
+  transition border .4s ease-in-out
+  user-select none
   z-index 1
   &:hover
     &:after
@@ -50,3 +52,17 @@
     background-color #000
     transition opacity .3s ease-in-out
     z-index -2
+  &--big
+    border-radius 27px
+    padding 15px 28px
+    &:after, .btn__video-wrap
+      border-radius 27px
+    .btn__video-wrap
+      left -16px
+      width calc(100% + 32px)
+    .btn__title
+      font-size 20px
+  &--light
+    border 2px solid transparent
+    &:hover
+      border-color #fff

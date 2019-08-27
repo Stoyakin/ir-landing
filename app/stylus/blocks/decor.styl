@@ -1,0 +1,51 @@
+.decor
+  display flex
+  justify-content flex-end
+  position relative
+  width 100%
+  overflow hidden
+  &.start-animate
+    .decor
+      &__rect
+        width 300px
+      &__overimg
+        opacity 1
+        visibility visible
+        right -80px
+  &__video
+    position absolute
+    top 0
+    right 0
+    height 100%
+    //width 300px
+  &__rect
+    position relative
+    height 680px
+    width 0
+    transition width .7s
+    overflow hidden
+    transition-delay .3s
+  &__overimg
+    width 462px
+    max-height 80%
+    position absolute
+    right -30px
+    bottom 0
+    opacity 0
+    visibility hidden
+    transition opacity .7s, visibility .7s, right .7s, left .7s
+    transition-delay 1s
+  &__img
+    max-width 100%
+    max-height 100%
+  &--left
+    width 600px
+    flex-shrink 0
+    justify-content flex-start
+    .decor__overimg
+      width 549px
+      right auto !important
+      left -87px !important
+      bottom 74px
+    &.start-animate .decor__overimg
+      left -137px !important

@@ -1,0 +1,81 @@
+.iserv
+  padding 91px 0 98px
+  position relative
+  overflow hidden
+  &__title
+    text-align center
+    margin-bottom 28px
+  &__tabs
+    &-nav
+      display flex
+      flex-wrap wrap
+      justify-content center
+      align-items flex-start
+      &-item
+        margin 0 16px 25px
+      &-btn
+        display block
+        position relative
+        padding 0 0 15px
+        color rgba(#fff, .35)
+        font-size 18px
+        font-weight 600
+        line-height 21px
+        background none
+        border none
+        user-select none
+        transition color .4s
+        &:after
+          @extend .after
+          left 50%
+          transform translateX(-50%)
+          bottom 0
+          width 0
+          height 5px
+          background-color $blue
+          transition width .4s
+        &:focus
+          outline none
+        &:hover
+          color $blue
+        &--active, &:hover
+          &:after
+            width 40px
+        &--active
+          color #fff
+          &:hover
+            color #fff
+    &-list
+      position relative
+    &-item
+      display none
+      text-align center
+      &--active
+        display block
+  &__items
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+    margin-bottom -36px
+  &__item
+    width calc(50% - 18px)
+    min-height 230px
+    background-color white
+    border-radius 5px
+    padding 26px 40px
+    margin-bottom 36px
+    text-align left
+    &-title
+      color $black
+      font-size 18px
+      font-weight 600
+      line-height 22px
+      margin-bottom 12px
+    &-descr
+      color #010101
+      font-size 16px
+      font-weight 400
+      line-height 20px
+      max-width 315px
+  &__btn
+    margin-top 50px

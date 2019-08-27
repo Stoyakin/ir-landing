@@ -37,3 +37,23 @@
   font-weight: 800;
   font-style: normal;
 }
+
+@font-face {
+	font-family: 'HelveticaNeueCyr';
+	src: url('../../../../static/fonts/HelveticaNeueCyr-Bold.eot');
+	src: url('../../../../static/fonts/HelveticaNeueCyr-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../../../../static/fonts/HelveticaNeueCyr-Bold.woff') format('woff'),
+		url('../../../../static/fonts/HelveticaNeueCyr-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Verdana';
+	src: url('../../../../static/fonts/Verdana.eot');
+	src: url('../../../../static/fonts/Verdana.eot?#iefix') format('embedded-opentype'),
+		url('../../../../static/fonts/Verdana.woff') format('woff'),
+		url('../../../../static/fonts/Verdana.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

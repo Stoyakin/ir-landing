@@ -1,0 +1,83 @@
+.form
+  text-align center
+  &--light
+    .form
+      &__text
+        color #fff
+      &__field
+        &-label
+          color #a4aec7
+        &-input, &-textarea
+          color #fff
+          background-color transparent
+          border-color rgba(#fff, 0.15)
+    .checkbox
+      &__input:checked ~ label:before
+        background-color #fff
+      &__label
+        color #fff
+        a
+          color #fff
+          border-color rgba(#fff, .25)
+          &:hover
+            border-bottom-color transparent
+        &:before
+          background-color transparent
+          border-color rgba(#fff, 0.15)
+  &__text
+    font-size 16px
+    font-weight 400
+    line-height 20px
+    color $black
+    margin-bottom 35px
+  &__row
+    display flex
+    justify-content space-between
+    margin-bottom 32px
+    &:last-child
+      margin-bottom 0
+  &__col
+    width calc(50% - 18px)
+  &__field
+    text-align left
+    margin-bottom 17px
+    &:last-child
+      margin-bottom 0
+    &-label
+      display block
+      font-family Montserrat
+      font-size 16px
+      font-weight 400
+      line-height 20px
+      color #a3a3a3
+      margin-bottom 5px
+    &-input, &-textarea
+      display block
+      width 100%
+      padding 5px 10px
+      border 2px solid rgba($black, 0.05)
+      color $black
+      font-family Montserrat
+      font-size 16px
+      font-weight 400
+      line-height 20px
+      background-color #fff
+      transition border .4s
+      outline none
+      &.error
+        border-color $red
+      &:focus
+        outline none
+    &-input
+      height 41px
+    &-textarea
+      height 100%
+      min-height 207px
+      resize none
+  &__submit
+    margin 0 auto
+  .checkbox
+    margin 13px auto 0
+
+.red
+  color $red

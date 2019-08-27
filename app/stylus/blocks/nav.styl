@@ -1,0 +1,28 @@
+.nav
+  &__list
+    display flex
+    &-item
+      margin 0 16px
+      &-href
+        display inline-block
+        vertical-align top
+        position relative
+        color $black
+        font-size 18px
+        font-weight 600
+        line-height 22px
+        transition color .4s
+        &:after
+          @extend .after
+          left 50%
+          transform translateX(-50%)
+          bottom -15px
+          width 0
+          height 5px
+          background-color #37c4f3
+          transition width .4s, bottom .4s
+        &:hover
+          color $blue
+        &:hover, &--active
+          &:after
+            width 40px

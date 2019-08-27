@@ -1,0 +1,59 @@
+.ireview
+  background-color #fbfbfb
+  padding 90px 0 100px
+  .center
+    text-align center
+  &__title
+    margin-bottom 31px
+  &__carousel
+    margin-bottom 52px
+  &__item
+    background-color white
+    max-width 948px
+    min-height 312px
+    padding 36px 50px
+    &-author
+      color $black
+      font-size 18px
+      font-weight 600
+      line-height 22px
+      margin-bottom 17px
+    &-text
+      p, ul li
+        color #010101
+        font-size 16px
+        font-weight 400
+        line-height 20px
+    &-date
+      display block
+      color #9d9d9d
+      font-size 16px
+      font-weight 400
+      line-height 20px
+      margin-top 17px
+  .swiper
+    // &-container
+    // &-wrapper
+    &-slide
+      width 948px
+    &-buttons
+      position absolute
+      left 50%
+      top 50%
+      transform translate(-50%, -50%)
+      width 1002px
+      height 0
+      z-index 1
+    &-button
+      &-prev, &-next
+        position absolute
+      &-prev
+        left 0
+        &:hover
+          &:before
+            transform rotate(45deg) scale(1.45)
+      &-next
+        right 0
+        &:hover
+          &:before
+            transform rotate(-135deg) scale(1.45)

@@ -1,0 +1,46 @@
+.inav
+  position relative
+  width 100%
+  left 0
+  top 0
+  padding 30px 42px
+  background-color #fff
+  z-index 10
+  transition box-shadow .4s
+  overflow hidden
+  &--fixed
+    position fixed
+    box-shadow 0 0 35px rgba(0, 0, 0, 0.15)
+    & + .iadvant
+      margin-top 101px
+    .inav
+      &__left, &__right
+        opacity 1
+        visibility visible
+    .nav__list-item-href:after
+      bottom -39px
+  //.logo
+  &__row
+    justify-content space-between
+    align-items center
+  &__left, &__right
+    width 25%
+    opacity 0
+    visibility hidden
+    transition opacity .4s, visibility .4s
+  //&__left
+  //&__center
+  &__right
+    display flex
+    align-items center
+    justify-content flex-end
+  &__phone
+    color $black
+    font-size 20px
+    font-weight 600
+    line-height 24px
+    transition opacity .4s
+    &:hover
+      opacity .7
+  &__btn
+    margin-left 20px

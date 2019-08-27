@@ -1,0 +1,58 @@
+.checkbox
+  display inline-block
+  vertical-align top
+  position relative
+  &__input
+    position absolute
+    left 0
+    top 0
+    opacity 0
+    visibility hidden
+    z-index -1
+    &:checked ~ label
+      &:after
+        opacity 1
+        visibility visible
+    &.error ~ label
+      &:before
+        border-color $red
+  &__label
+    display block
+    position relative
+    color $black
+    font-size 16px
+    font-weight 400
+    line-height 20px
+    padding-left 42px
+    cursor pointer
+    &:before
+      @extend .before
+      left 0
+      top -5px
+      width 24px
+      height 24px
+      background-color #fff
+      border 2px solid rgba($black, .05)
+      transition background .4s, border .4s
+      z-index 1
+    &:after
+      @extend .after
+      left 3px
+      top -5px
+      width 27px
+      height 10px
+      border-left 5px solid #0958a5
+      border-bottom 5px solid #0958a5
+      transform rotate(-45deg)
+      opacity 0
+      visibility hidden
+      transition opacity .4s, visibility .4s
+      z-index 2
+    a
+      color $black
+      border-bottom 1px solid $black
+      transition border .4s, color .4s
+      &:hover
+        color $blue
+        border-bottom-color transparent
+

@@ -1,8 +1,21 @@
-.container
+.container, .center
   width 100%
   margin 0 auto
+
+.container
+  max-width 1440px
+
+.center
+  max-width 946px
 
 .row
   display flex
   flex-wrap wrap
   width 100%
+
+.col
+  display flex
+  flex-wrap wrap
+  width 100%
+  &-6
+    width calc(50% - 18px)

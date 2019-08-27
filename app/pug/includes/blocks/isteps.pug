@@ -1,0 +1,39 @@
++b('section').isteps
+  .container
+    .center
+      +e.row.row
+        +e.left.col.col-6
+          +b.decor.--left.js-scroll-anim
+            +e.rect
+              +e('video')(autoplay muted="muted" preload="auto" playsinline="" loop="loop" poster="static/video/video-back-poster.jpg").video
+                source(src="static/video/video-back.mp4" type="video/mp4")
+            +e.overimg
+              +e('img')(src=baseSrc+"decor2.png" alt="").img
+        +e.right.col.col-6
+          +e('h2').title.title Как мы<br >работаем
+          +e.text
+            .text
+              p Каждый наш юрист имеет узкую специализацию и подбирается индивидульано, исходя из специфики вашего дела.
+              p При проигрыше дела мы возвращаем все уплаченные нам деньги, а при выигрыше все расходы ложатся на проигравшую сторону. Следовательно вы ничем не рискуете!
+          +e('a')(href="#").btn.play-btn
+            span.play-btn__video
+              span.play-btn__video-over
+                video(autoplay muted="muted" preload="auto" playsinline="" loop="loop" poster="static/video/video-btn-poster.jpg").play-btn__video-item
+                  source(src="static/video/video-btn.mp4" type="video/mp4")
+            span.play-btn__title Посмотрите видео о том, как мы работаем
+    +e('ul').items
+      +e('li').item
+        +e.item-overico
+          +e('img')(src=baseSrc+"isteps-ico.png" alt="").item-ico
+        +e('p').item-title У нас опытные специалисты
+        +e('p').item-descr Средний стаж юридической практики наших специалистов – 11 лет. Каждый юрист имеет узкую специализацию и подбирается индивидульано, исходя из специфики вашего дела.
+      +e('li').item
+        +e.item-overico
+          +e('img')(src=baseSrc+"isteps-ico2.png" alt="").item-ico
+        +e('p').item-title Вы ни чем не рискуете
+        +e('p').item-descr При проигрыше дела мы возвращаем все уплаченные нам деньги, а при выигрыше все расходы ложатся на проигравшую сторону. Следовательно вы ничем не рискуете!
+      +e('li').item
+        +e.item-overico
+          +e('img')(src=baseSrc+"isteps-ico.png" alt="").item-ico
+        +e('p').item-title Спокойствие и уверенность
+        +e('p').item-descr Вы можете полностью доверить нам решение своего вопроса. Информация по Вашему делу является строго конфиденциальной и не подлежит разглашению третьим лицам ни при каких обстоятельствах.

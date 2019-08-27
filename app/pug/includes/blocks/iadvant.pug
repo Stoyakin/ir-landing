@@ -1,0 +1,40 @@
++b('section').iadvant
+  .container
+    .center
+      +e.row.row
+        +e.left.col.col-6
+          +e.text
+            .text
+              p Мы защищаем интересы наших клиентов в делах по следующим направлениям:
+              ul
+                li мошенничество;
+                li присвоение и растрата;
+                li злоупотребление полномочиями;
+                li подделка документов;
+                li фиктивное банкротство.
+              p Помогаем подготовить заявления<br >в правоохранительные органы, сопровождаем заявления до возбуждения уголовного дела и после.
+          +video-btn('Задать вопрос юристу')(class="--big iadvant__btn")
+        +e.right.col.col-6
+          +b.decor.js-scroll-anim
+            +e.rect
+              +e('video')(autoplay muted="muted" preload="auto" playsinline="" loop="loop" poster="static/video/video-back-poster.jpg").video
+                source(src="static/video/video-back.mp4" type="video/mp4")
+            +e.overimg
+              +e('img')(src=baseSrc+"decor.png" alt="").img
+
+    +e('ul').items
+      +e('li').item
+        +e('p').item-number
+          span 12
+          |  лет
+        +e('p').item-descr мы оказываем профессиональные юридические услуги.
+      +e('li').item
+        +e('p').item-number
+          span 11
+          |  лет
+        +e('p').item-descr средний стаж юридической практики у наших специалистов.
+      +e('li').item
+        +e('p').item-number
+          span 289
+          |  дел
+        +e('p').item-descr выиграно в течение последних 5 лет. А это 98% всех наших дел.

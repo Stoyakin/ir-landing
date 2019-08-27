@@ -1,0 +1,25 @@
++b('section').icontacts
+  .center
+    +e.row.row
+      +e.left.col.col-6
+        +e('h2').title.title Контактная информация
+        +e('ul').items
+          +e('li').item
+            +e('p').item-title Адрес
+            +e.item-data
+              address Челябинск, улица Осипенко, дом 3, офис 2
+          +e('li').item
+            +e('p').item-title Телефоны
+            +e.item-data
+              a(href="tel:83517502541") +7 351 750-25-41
+              a(href="tel:83433191243") +7 343 319-12-43
+          +e('li').item
+            +e('p').item-title Режим работы
+            +e.item-data 
+              p Понедельник – пятница, с 08:00 до 23:00
+          +e('li').item
+            +e('p').item-title E-mail
+            +e.item-data
+              a(href="mailto:intelligent.chel@mail.ru") intelligent.chel@mail.ru
+      +e.right.col.col-6
+        +e.map.js-map#yaMap(data-coords="55.191073, 61.375615")

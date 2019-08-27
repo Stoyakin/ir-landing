@@ -1,0 +1,30 @@
+.text
+  *
+    &:first-child
+      margin-top 0
+  *
+    &:last-child
+      margin-bottom 0
+  p
+    color $black
+    font-size 18px
+    font-weight 600
+    line-height 22px
+    margin-bottom 22px
+  ul
+    padding-left 14px
+    margin-bottom 22px
+    li
+      position relative
+      padding-left 14px
+      color $black
+      font-size 18px
+      font-weight 600
+      line-height 22px
+      &:before
+        @extend .before
+        left 0
+        top 9px
+        width 5px
+        height 5px
+        background-color $black

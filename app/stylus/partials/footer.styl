@@ -1,23 +1,46 @@
 .footer
   padding 41px 0 32px
+  @media $desktopMax
+    padding-bottom 23px
   &__row
     align-items center
+    @media (max-width: 1239px)
+      flex-direction column
+      justify-content center
+      text-align center
   &__copy
     color #fff
     font-size 16px
     font-weight 400
     line-height 20px
     margin-right 177px
+    @media $desktopMax
+      font-size 15px
+      line-height 19px
+      margin-right 148px
+    @media (max-width: 1239px)
+      margin-right 0
+      margin-bottom 15px
   &__center
     display flex
     align-items center
     flex-wrap wrap
+    @media (max-width: 1239px)
+      flex-direction column
+      justify-content center
   &__address
     color #fff
     font-size 16px
     font-weight 400
     line-height 20px
     margin-right 24px
+    @media $desktopMax
+      font-size 15px
+      line-height 19px
+      margin-right 28px
+    @media (max-width: 1239px)
+      margin-right 0
+      margin-bottom 15px
     &:last-child
       margin-right 0
   &__phone
@@ -25,19 +48,31 @@
     font-size 20px
     font-weight 600
     line-height 24px
+    @media $desktopMax
+      font-size 18px
   &__developer
     display flex
     align-items center
-    color #fff
-    font bold 12px/26px 'HelveticaNeueCyr'
+    color rgba(#fff, .5)
+    font 400 9px/14px 'Verdana'
+    margin-left 13px
+    letter-spacing 0.17em
     text-transform uppercase
-    margin-left auto
-    margin-right 45px
     max-width 155px
-    letter-spacing 0.19em
-    margin-top -2px
+    margin -2px 45px 0 auto
+    @media $desktopMax
+      margin -1px 36px 0 auto
+    @media (max-width: 1239px)
+      margin 25px 0 15px
     span
-      color rgba(#fff, .5)
-      font 400 9px/14px 'Verdana'
-      margin-left 13px
-      letter-spacing 0.17em
+      font bold 12px/22px 'HelveticaNeueCyr'
+      color #fff
+      margin-right 10px
+      letter-spacing 0.19em
+      background-color #004a93
+      border-radius 3px
+      padding 1px 4px 1px 6px
+      transition background .4s
+    &:hover
+      span
+        background-color rgba(#004a93, .5)

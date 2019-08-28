@@ -1,18 +1,32 @@
 .iadvant
   background-color #fff
   padding 96px 0 95px
+  @media $desktopMax
+    padding 73px 0 66px
   &__row
     align-items center
     justify-content space-between
-  //&__left
+  &__left
+    @media $tPortraitMax
+      flex-direction column
+      width 100%
+      margin-bottom 35px
+      a
+        align-self flex-start
   &__text
     max-width 365px
+    @media $tPortraitMax
+      max-width 100%
   &__btn
     margin-top 45px
+    @media $desktopMax
+      margin-top 35px
     &:first-child
       margin-top 0
   &__right
     justify-content flex-end
+    @media $tPortraitMax
+      display none
   &__items
     display flex
     flex-wrap wrap
@@ -20,16 +34,37 @@
     align-items flex-start
     margin-top 86px
     margin-bottom -34px
+    @media $desktopMax
+      margin-top 89px
+    @media $mLandscapeMax
+      margin-top 50px
+      margin-bottom 0
   &__item
     text-align center
     width calc(100%/3)
     max-width 340px
     margin 0 39px 34px
+    @media $desktopMax
+      margin 0 28px 34px
+    @media $minDesktopMax
+      width calc(100%/3 - 30px)
+      margin 0 15px 34px
+    @media $mLandscapeMax
+      width 100%
+      margin 0 0 30px
+      &:last-child
+        margin-bottom 0
     &-number
       color $black
       font-size 80px
       font-weight 600
       line-height 84px
+      @media $desktopMax
+        font-size 72px
+        line-height 72px
+      @media $minDesktopMax
+        font-size 50px
+        line-height 50px
     &-descr
       color #010101
       font-size 16px
@@ -37,4 +72,8 @@
       line-height 20px
       margin-top 3px
       padding 0 20px
+      @media $desktopMax
+        font-size 15px
+        line-height 19px
+        margin-top 6px
 

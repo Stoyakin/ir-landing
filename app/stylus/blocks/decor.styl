@@ -8,6 +8,8 @@
     .decor
       &__rect
         width 300px
+        @media $desktopMax
+          width 270px
       &__overimg
         opacity 1
         visibility visible
@@ -25,9 +27,10 @@
     transition width .7s
     overflow hidden
     transition-delay .3s
+    @media $desktopMax
+      height 630px
   &__overimg
     width 462px
-    max-height 80%
     position absolute
     right -30px
     bottom 0
@@ -47,5 +50,7 @@
       right auto !important
       left -87px !important
       bottom 74px
+      @media $desktopMax
+        bottom 30px
     &.start-animate .decor__overimg
       left -137px !important

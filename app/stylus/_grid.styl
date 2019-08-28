@@ -4,9 +4,24 @@
 
 .container
   max-width 1440px
+  @media $desktopMax
+    max-width 1300px
+  @media $minDesktopMax
+    max-width calc(100% - 60px)
+  @media $mPortraitMax
+    max-width calc(100% - 30px)
+  .center
+    @media $tPortraitMax
+      max-width 100%
 
 .center
   max-width 946px
+  @media $desktopMax
+    max-width 856px
+  @media $tPortraitMax
+    max-width calc(100% - 60px)
+  @media $mPortraitMax
+    max-width calc(100% - 30px)
 
 .row
   display flex
@@ -19,3 +34,5 @@
   width 100%
   &-6
     width calc(50% - 18px)
+    @media $desktopMax
+      width calc(50% - 16px)

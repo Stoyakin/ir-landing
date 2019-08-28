@@ -279,19 +279,31 @@ document.addEventListener("DOMContentLoaded", function (event) {
       const inav = qs('.inav'),
         inavHeight = inav.offsetHeight,
         offsetTop = inav.offsetTop;
-      window.addEventListener('scroll', () => {
-        if (window.pageYOffset > offsetTop) {
-          if (!inav.classList.contains('inav--fixed')) inav.classList.add('inav--fixed')
-        } else if (inav.classList.contains('inav--fixed')) {
-          inav.classList.remove('inav--fixed')
-        }
+      window.addEventListener('resize', () => {
+        window.addEventListener('scroll', () => {
+          if (window.innerWidth > 1239) {
+            qs('.header').classList.contains('fixed') ? qs('.header').classList.remove('fixed') : ''
+            if (window.pageYOffset > offsetTop) {
+              if (!inav.classList.contains('inav--fixed')) inav.classList.add('inav--fixed')
+            } else if (inav.classList.contains('inav--fixed')) {
+              inav.classList.remove('inav--fixed');
+            }
+          } else {
+            inav.classList.contains('inav--fixed') ? inav.classList.remove('inav--fixed') : '';
+            if (qs('.header').offsetHeight < window.pageYOffset) {
+              !qs('.header').classList.contains('fixed') ? qs('.header').classList.add('fixed') : ''
+            } else if (qs('.header').classList.contains('fixed')) {
+              qs('.header').classList.remove('fixed')
+            }
+          }
+        });
       });
     },
 
     burger: function burger() {
       qs('.js-burger').addEventListener('click', function (e) {
         this.classList.toggle('active');
-        qs('.main__aside').classList.toggle('show');
+        qs('.nav').classList.toggle('open');
         qs('body').classList.toggle('open-menu');
         e.preventDefault();
       });
@@ -334,6 +346,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
         navigation: {
           nextEl: '.ireview .swiper-button-next',
           prevEl: '.ireview .swiper-button-prev',
+        },
+        breakpoints: {
+          767: {
+            autoHeight: true
+          },
         }
       });
 
@@ -385,6 +402,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
       if (qs('.js-map')) this.map();
 
+      if (qs('.js-burger')) this.burger();
+
+      if ($('.js-mfp').length) {
+        $('.js-mfp').magnificPopup({
+            type: 'inline',
+            midClick: true
+        });
+      }
+
       let eventResize
       try {
         eventResize = new Event('resize')
@@ -409,3 +435,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }.init();
 
 });
+

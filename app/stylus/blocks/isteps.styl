@@ -3,18 +3,29 @@
   position relative
   background-color #fff
   overflow hidden
+  @media $desktopMax
+    padding 70px 0 66px
   &__row
     justify-content space-between
     align-items center
   &__left
     justify-content flex-start
+    @media $tPortraitMax
+      display none
   &__right
     position relative
     z-index 2
+    @media $tPortraitMax
+      width 100%
   &__title
     margin-bottom 27px
+    @media $mLandscapeMax
+      br
+        display none
   &__text
     max-width 372px
+    @media $tPortraitMax
+      max-width 100%
   &__btn
     margin-top 39px
   &__items
@@ -23,15 +34,25 @@
     align-items flex-start
     justify-content center
     margin-top 87px
+    @media $desktopMax
+      margin-top 91px
   &__item
     display flex
     flex-direction column
     justify-content center
     align-items center
-    width calc(100%/3)
+    width calc(100%/3 - 68px)
     margin 0 34px
     max-width 350px
     text-align center
+    @media $minDesktopMax
+      width calc(100%/3 - 30px)
+      margin 0 15px
+    @media $mLandscapeMax
+      width 100%
+      margin 0 0 32px
+      &:last-child
+        margin-bottom 0
     &-overico
       display flex
       justify-content center
@@ -46,11 +67,17 @@
       font-weight 600
       line-height 22px
       margin-bottom 11px
+      @media $desktopMax
+        font-size 17px
+        line-height 21px
     &-descr
       color #010101
       font-size 16px
       font-weight 400
       line-height 20px
       max-width 310px
+      @media $desktopMax
+        font-size 15px
+        line-height 19px
   .play-btn
     max-width 320px

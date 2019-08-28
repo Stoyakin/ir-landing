@@ -2,6 +2,8 @@
   padding 91px 0 98px
   position relative
   overflow hidden
+  @media $desktopMax
+    padding 62px 0 68px
   &__title
     text-align center
     margin-bottom 28px
@@ -11,8 +13,16 @@
       flex-wrap wrap
       justify-content center
       align-items flex-start
+      @media $mLandscapeMax
+        flex-direction column
+        align-items center
+        margin-bottom 30px
       &-item
         margin 0 16px 25px
+        @media $mLandscapeMax
+          margin 0 0 15px
+          &:last-child
+            margin-bottom 0
       &-btn
         display block
         position relative
@@ -25,6 +35,11 @@
         border none
         user-select none
         transition color .4s
+        @media $desktopMax
+          font-size 17px
+          line-height 21px
+        @media $mLandscapeMax
+          padding-bottom 0
         &:after
           @extend .after
           left 50%
@@ -34,6 +49,9 @@
           height 5px
           background-color $blue
           transition width .4s
+          @media $mLandscapeMax
+            display none
+            content none
         &:focus
           outline none
         &:hover
@@ -57,6 +75,8 @@
     flex-wrap wrap
     justify-content space-between
     margin-bottom -36px
+    @media $mLandscapeMax
+      margin-bottom 0
   &__item
     width calc(50% - 18px)
     min-height 230px
@@ -65,17 +85,33 @@
     padding 26px 40px
     margin-bottom 36px
     text-align left
+    @media $desktopMax
+      width calc(50% - 16px)
+      margin-bottom 32px
+    @media $mLandscapeMax
+      width 100%
+      min-height auto
+      &:last-child
+        margin-bottom 0
     &-title
       color $black
       font-size 18px
       font-weight 600
       line-height 22px
       margin-bottom 12px
+      @media $desktopMax
+        font-size 17px
+        line-height 21px
     &-descr
       color #010101
       font-size 16px
       font-weight 400
       line-height 20px
       max-width 315px
+      @media $desktopMax
+        font-size 15px
+        line-height 19px
   &__btn
     margin-top 50px
+    @media $desktopMax
+      margin-top 42px

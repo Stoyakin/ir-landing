@@ -25,6 +25,10 @@
     line-height 20px
     padding-left 42px
     cursor pointer
+    @media $desktopMax
+      font-size 15px
+      line-height 19px
+      padding-left 34px
     &:before
       @extend .before
       left 0
@@ -35,6 +39,10 @@
       border 2px solid rgba($black, .05)
       transition background .4s, border .4s
       z-index 1
+      @media $desktopMax
+        top -3px
+        width 20px
+        height 20px
     &:after
       @extend .after
       left 3px
@@ -48,6 +56,10 @@
       visibility hidden
       transition opacity .4s, visibility .4s
       z-index 2
+      @media $desktopMax
+        top -3px
+        width 24px
+        border-width 4px
     a
       color $black
       border-bottom 1px solid $black

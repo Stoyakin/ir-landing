@@ -5,22 +5,35 @@
   top 0
   padding 30px 42px
   background-color #fff
-  z-index 10
+  //z-index 10
   transition box-shadow .4s
   overflow hidden
+  @media $desktopMax
+    padding 20px 34px
+  @media (max-width: 1239px)
+    padding 0
+    height 0
+    box-shadow none
   &--fixed
     position fixed
     box-shadow 0 0 35px rgba(0, 0, 0, 0.15)
+    z-index 5
     & + .iadvant
       margin-top 101px
+      @media $desktopMax
+        margin-top 66px
+      @media (max-width: 1239px)
+        margin-top 0
     .inav
       &__left, &__right
         opacity 1
         visibility visible
     .nav__list-item-href:after
       bottom -39px
-  //.logo
+      @media (max-width: 1770px)
+        bottom -32px
   &__row
+    flex-wrap nowrap
     justify-content space-between
     align-items center
   &__left, &__right
@@ -28,8 +41,10 @@
     opacity 0
     visibility hidden
     transition opacity .4s, visibility .4s
-  //&__left
-  //&__center
+    @media (max-width: 1770px)
+      width 19%
+    @media (max-width: 1239px)
+      display none
   &__right
     display flex
     align-items center
@@ -44,3 +59,5 @@
       opacity .7
   &__btn
     margin-left 20px
+    @media (max-width: 1770px)
+      display none

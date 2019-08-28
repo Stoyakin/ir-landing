@@ -3,12 +3,14 @@
   vertical-align top
   position relative
   color #fff
-  padding 8px 20px 9px
+  padding 9px 20px 8px
   border-radius 21px
   background none
   transition border .4s ease-in-out
   user-select none
   z-index 1
+  @media $desktopMax
+    padding 6px 20px
   &:hover
     &:after
       opacity 0
@@ -22,6 +24,8 @@
     text-align center
     font 600 16px/24px Montserrat
     z-index 1
+    @media $desktopMax
+      font-size 14px
   &__video
     &-wrap
       position absolute
@@ -55,6 +59,8 @@
   &--big
     border-radius 27px
     padding 15px 28px
+    @media $desktopMax
+      padding 14px 28px 12px
     &:after, .btn__video-wrap
       border-radius 27px
     .btn__video-wrap
@@ -62,6 +68,8 @@
       width calc(100% + 32px)
     .btn__title
       font-size 20px
+      @media $desktopMax
+        font-size 18px
   &--light
     border 2px solid transparent
     &:hover

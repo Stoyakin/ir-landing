@@ -1,0 +1,37 @@
++b.popup.--feedback#feedback.mfp-hide
+  +e.container
+    +e('h3').title.title Остались вопросы?
+    +b('form').form
+      +e('p').text Обратите внимание, поля со звездочкой 
+        span.red *
+        |  обязательны для заполнения.
+      +e.row
+        +e.col
+          +e.field
+            +e('label')(for="inp_04").field-label Ваше имя 
+              span.red *
+            +e('input')(type="text" id="inp_04" data-req="req" value="Александр").field-input
+          +e.field
+            +e('label')(for="inp_05").field-label Электронная почта 
+              span.red *
+            +e('input')(type="email" id="inp_05" data-req="req" data-type="email").field-input
+          +e.field
+            +e('label')(for="inp_06").field-label Телефон
+            +e('input')(type="text" id="inp_06").field-input.js-phone.js-digits
+        +e.col
+          +e.field
+            +e('label')(for="text_02").field-label Текст вопроса 
+              span.red *
+            +e('textarea')(data-req="req" id="text_02").field-textarea
+      +e.row
+        +b.checkbox
+          +e('input')(type="checkbox" id="agreement2" data-req="agreement").input
+          +e('label')(for="agreement2").label Даю согласие на обработку 
+            a(href="#") персональных данных
+      +e.row
+        +e('button').submit.btn
+          span.btn__title Отправить вопрос
+          span.btn__video-wrap
+            video(autoplay muted="muted" preload="auto" playsinline="" loop="loop" poster="static/video/video-btn-poster.jpg").btn__video-item
+              source(src="static/video/video-btn.mp4" type="video/mp4")
+

@@ -14,37 +14,4 @@ block main
   include includes/blocks/isteps
   include includes/blocks/ireview
   include includes/blocks/icontacts
-
-  +b('section').ifeed
-    .center
-      +e('h2').title.title.title--white Остались вопросы?
-      +b('form').form.--light
-        +e('p').text Обратите внимание, поля со звездочкой 
-          span.red *
-          |  обязательны для заполнения.
-        +e.row
-          +e.col
-            +e.field
-              +e('label')(for="inp_01").field-label Ваше имя 
-                span.red *
-              +e('input')(type="text" id="inp_01" data-req="req" value="Александр").field-input
-            +e.field
-              +e('label')(for="inp_02").field-label Электронная почта 
-                span.red *
-              +e('input')(type="email" id="inp_02" data-req="req" data-type="email").field-input
-            +e.field
-              +e('label')(for="inp_03").field-label Телефон
-              +e('input')(type="text" id="inp_03").field-input.js-phone.js-digits
-          +e.col
-            +e.field
-              +e('label')(for="text_01").field-label Текст вопроса 
-                span.red *
-              +e('textarea')(data-req="req" id="text_01").field-textarea
-        +e.row
-          +b.checkbox
-            +e('input')(type="checkbox" id="agreement" data-req="agreement").input
-            +e('label')(for="agreement").label Даю согласие на обработку 
-              a(href="#") персональных данных
-        +e.row
-          +e('button').submit.btn.--light
-            span.btn__title Отправить вопрос
+  include includes/blocks/ifeed

@@ -253,7 +253,9 @@ gulp.task('js-own', js([src.app.js + 'common.js'], src.build.js, 'own.js'));
 
 gulp.task('js-vendor', jsVendor([
     src.app.js + 'ext/polyfill.js',
-    'node_modules/swiper/dist/js/swiper.js'
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/swiper/dist/js/swiper.js',
+    'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
   ],
   src.build.js,
   'vendor.js'

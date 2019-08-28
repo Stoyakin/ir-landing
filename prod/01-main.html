@@ -14,10 +14,19 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="header__row row"><a class="logo" href="/"><img class="logo__img" src="static/img/logo.png" alt="Ителлектуальеные решения" title=""/></a><a class="header__phone" href="tel:83517502541">+7 351 750-25-41</a><a class="btn header__btn" href="#"> <span class="btn__title">Задать вопрос юристу</span><span class="btn__video-wrap">
+        <div class="header__row row"><a class="logo" href="/"><img class="logo__img" src="static/img/logo.png" alt="Ителлектуальеные решения" title=""/></a><a class="header__phone" href="tel:83517502541">+7 351 750-25-41</a><a class="btn header__btn js-mfp" href="#feedback"> <span class="btn__title">Задать вопрос юристу</span><span class="btn__video-wrap">
           <video class="btn__video-item" autoplay="autoplay" muted="muted" preload="auto" playsinline="" loop="loop" poster="static/video/video-btn-poster.jpg">
             <source src="static/video/video-btn.mp4" type="video/mp4"/>
           </video></span></a>
+          <button class="header__burger js-burger" type="button">
+            <div class="header__burger-line">
+            </div>
+            <div class="header__burger-video">
+              <video class="header__burger-video-item" autoplay="autoplay" muted="muted" preload="auto" playsinline="" loop="loop" poster="static/video/video-btn-poster.jpg">
+                <source src="static/video/video-btn.mp4" type="video/mp4">
+              </video>
+            </div>
+          </button>
         </div>
       </header>
       <main class="main">
@@ -28,28 +37,50 @@
         </section>
         <section class="ihead">
           <div class="ihead__container">
-            <div class="ihead__pattern"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="none">
-<style type="text/css">
-	.st0{fill:#FFFFFF;}
-</style>
-<g>
-	<path class="st0" d="M915.4,376c0.1,0,0.2,0,0.2,0C915.5,376,915.5,376,915.4,376C915.4,376,915.4,376,915.4,376z"/>
-	<path class="st0" d="M914.9,376c-0.3,0-0.7,0-1,0.1c0.6,0,1.3-0.1,1.5-0.1C915.2,376,915.1,376,914.9,376z"/>
-	<path class="st0" d="M0.5,1v1080h1920V1H0.5z M141.6,607c36,0,63.3-0.9,103-52.7c21.8-28.4,41.8-58.2,41.8-58.2l153.3-210.7
-		c0,0,20-29.7,41.8-58c39.7-51.6,66.9-52.5,102.9-52.5c27.1,0,109.2,0,132.4,0c-35.9,0-63.2,0.9-102.9,52.5
-		c-21.8,28.3-41.8,58-41.8,58L418.8,496.2c0,0-20,29.8-41.8,58.2c-39.7,51.8-67,52.7-103,52.7C246.8,607,164.8,607,141.6,607z
-		 M314.4,607c36,0,63.3-0.9,103-52.7c21.8-28.4,41.8-58.2,41.8-58.2l153.3-210.7c0,0,20-29.7,41.8-58C694,175.9,721.2,175,757.2,175
-		c27.1,0,109.2,0,132.4,0c-35.9,0-63.2,0.9-102.9,52.5c-21.8,28.3-41.8,58-41.8,58L591.6,496.2c0,0-20,29.8-41.8,58.2
-		c-39.7,51.8-67,52.7-103,52.7C419.6,607,337.5,607,314.4,607z M914.5,483c-122.8,0-137.1,0-137.1,0c16.3-22.7,15.7-22.1,34.3-47.3
-		c39.8-54.2,67.1-57.3,102.2-59.6c-1.6,0.1-3.3,0.1,1-0.1c0.2,0,0.3,0,0.5,0c-35.7,0-62.9,1.1-102.5,52.5
-		c-21.8,28.3-41.8,58-41.8,58l-6.9,9.7c0,0-20,29.8-41.8,58.2c-39.7,51.8-67,52.7-103,52.7c-27.2,0-109.2,0-132.4,0
-		c36,0,63.3-0.9,103-52.7c21.8-28.4,41.8-58.2,41.8-58.2l6.9-9.7c0,0,20-29.7,41.8-58c39.7-51.6,66.9-52.5,102.9-52.5
-		c27,0,108.3,0,132,0c0.1,0,0.1,0,0.2,0c0.1,0,0.2,0,0.3,0c25.7-1.2,45.5-19.9,45.5-45.5c0-25.7-20.9-46.5-46.6-46.5
-		s-153.8-0.1-165.5-0.1c16.9-23.4,15.9-21.9,34.3-47.4c42.5-58.7,73.9-61.6,106.5-61.6c5.1,0,21.9,0,25.4,0c84.5,0,152,70.4,152,155
-		C1067.5,414.5,999,483,914.5,483z"/>
-	<polygon class="st0" points="915.4,376 915.4,376 915.4,376 	"/>
-	<path class="st0" d="M915.8,376c-0.1,0-0.1,0-0.2,0c0,0,0,0,0,0C915.7,376,915.7,376,915.8,376z"/>
-</g>
+            <div class="ihead__pattern">
+              <svg class="pattern" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="none">
+  <style type="text/css">
+    .st0{fill:#FFFFFF;}
+  </style>
+  <g>
+    <path class="st0" d="M915.4,376c0.1,0,0.2,0,0.2,0C915.5,376,915.5,376,915.4,376C915.4,376,915.4,376,915.4,376z"/>
+    <path class="st0" d="M914.9,376c-0.3,0-0.7,0-1,0.1c0.6,0,1.3-0.1,1.5-0.1C915.2,376,915.1,376,914.9,376z"/>
+    <path class="st0" d="M0.5,1v1080h1920V1H0.5z M141.6,607c36,0,63.3-0.9,103-52.7c21.8-28.4,41.8-58.2,41.8-58.2l153.3-210.7
+      c0,0,20-29.7,41.8-58c39.7-51.6,66.9-52.5,102.9-52.5c27.1,0,109.2,0,132.4,0c-35.9,0-63.2,0.9-102.9,52.5
+      c-21.8,28.3-41.8,58-41.8,58L418.8,496.2c0,0-20,29.8-41.8,58.2c-39.7,51.8-67,52.7-103,52.7C246.8,607,164.8,607,141.6,607z
+      M314.4,607c36,0,63.3-0.9,103-52.7c21.8-28.4,41.8-58.2,41.8-58.2l153.3-210.7c0,0,20-29.7,41.8-58C694,175.9,721.2,175,757.2,175
+      c27.1,0,109.2,0,132.4,0c-35.9,0-63.2,0.9-102.9,52.5c-21.8,28.3-41.8,58-41.8,58L591.6,496.2c0,0-20,29.8-41.8,58.2
+      c-39.7,51.8-67,52.7-103,52.7C419.6,607,337.5,607,314.4,607z M914.5,483c-122.8,0-137.1,0-137.1,0c16.3-22.7,15.7-22.1,34.3-47.3
+      c39.8-54.2,67.1-57.3,102.2-59.6c-1.6,0.1-3.3,0.1,1-0.1c0.2,0,0.3,0,0.5,0c-35.7,0-62.9,1.1-102.5,52.5
+      c-21.8,28.3-41.8,58-41.8,58l-6.9,9.7c0,0-20,29.8-41.8,58.2c-39.7,51.8-67,52.7-103,52.7c-27.2,0-109.2,0-132.4,0
+      c36,0,63.3-0.9,103-52.7c21.8-28.4,41.8-58.2,41.8-58.2l6.9-9.7c0,0,20-29.7,41.8-58c39.7-51.6,66.9-52.5,102.9-52.5
+      c27,0,108.3,0,132,0c0.1,0,0.1,0,0.2,0c0.1,0,0.2,0,0.3,0c25.7-1.2,45.5-19.9,45.5-45.5c0-25.7-20.9-46.5-46.6-46.5
+      s-153.8-0.1-165.5-0.1c16.9-23.4,15.9-21.9,34.3-47.4c42.5-58.7,73.9-61.6,106.5-61.6c5.1,0,21.9,0,25.4,0c84.5,0,152,70.4,152,155
+      C1067.5,414.5,999,483,914.5,483z"/>
+    <polygon class="st0" points="915.4,376 915.4,376 915.4,376 	"/>
+    <path class="st0" d="M915.8,376c-0.1,0-0.1,0-0.2,0c0,0,0,0,0,0C915.7,376,915.7,376,915.8,376z"/>
+  </g>
+</svg>
+              <svg class="pattern-mobile" xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 1300 1024" preserveAspectRatio="none">
+  <g>
+    <path d="M879.4,393.4c0.1,0,0.2,0,0.2,0C879.5,393.4,879.5,393.4,879.4,393.4L879.4,393.4z"/>
+    <path d="M879,393.4c-0.3,0-0.6,0-0.9,0.1c0.5,0,1.1-0.1,1.3-0.1C879.2,393.4,879.2,393.4,879,393.4z"/>
+    <path d="M0,0v1024h1300V0H0z M209.3,524.8c31.2,0,54.8-0.8,89.2-45.6c18.9-24.6,36.2-50.4,36.2-50.4l132.8-182.5
+      c0,0,17.3-25.7,36.2-50.2c34.4-44.7,57.9-45.5,89.1-45.5c23.5,0,94.6,0,114.7,0c-31.1,0-54.7,0.8-89.1,45.5
+      c-18.9,24.5-36.2,50.2-36.2,50.2L449.3,428.9c0,0-17.3,25.8-36.2,50.4c-34.4,44.9-58,45.6-89.2,45.6
+      C300.4,524.8,229.4,524.8,209.3,524.8z M358.9,524.8c31.2,0,54.8-0.8,89.2-45.6c18.9-24.6,36.2-50.4,36.2-50.4l132.8-182.5
+      c0,0,17.3-25.7,36.2-50.2c34.4-44.6,57.9-45.4,89.1-45.4c23.5,0,94.6,0,114.7,0c-31.1,0-54.7,0.8-89.1,45.5
+      c-18.9,24.5-36.2,50.2-36.2,50.2L599,428.9c0,0-17.3,25.8-36.2,50.4c-34.4,44.9-58,45.6-89.2,45.6
+      C450,524.8,378.9,524.8,358.9,524.8z M878.6,417.4c-106.4,0-118.7,0-118.7,0c14.1-19.7,13.6-19.1,29.7-41
+      c34.5-46.9,58.1-49.6,88.5-51.6c-1.4,0.1-2.9,0.1,0.9-0.1c0.2,0,0.3,0,0.4,0c-30.9,0-54.5,1-88.8,45.5
+      c-18.9,24.5-36.2,50.2-36.2,50.2l-6,8.4c0,0-17.3,25.8-36.2,50.4c-34.4,44.9-58,45.6-89.2,45.6c-23.6,0-94.6,0-114.7,0
+      c31.2,0,54.8-0.8,89.2-45.6c18.9-24.6,36.2-50.4,36.2-50.4l6-8.4c0,0,17.3-25.7,36.2-50.2c34.4-44.7,57.9-45.5,89.1-45.5
+      c23.4,0,93.8,0,114.3,0c0.1,0,0.1,0,0.2,0s0.2,0,0.3,0c22.3-1,39.4-17.2,39.4-39.4c0-22.3-18.1-40.3-40.4-40.3S745.7,245,735.6,245
+      c14.6-20.3,13.8-19,29.7-41.1c36.8-50.8,64-53.3,92.2-53.3c4.4,0,19,0,22,0c73.2,0,131.6,61,131.6,134.2S951.8,417.4,878.6,417.4z"
+      />
+    <path class="st0" d="M879.4,393.4L879.4,393.4L879.4,393.4z"/>
+    <path class="st0" d="M879.8,393.4c-0.1,0-0.1,0-0.2,0l0,0C879.7,393.4,879.7,393.4,879.8,393.4z"/>
+  </g>
 </svg>
 
             </div>
@@ -271,7 +302,7 @@
                   </div>
                 </div>
                 <div class="isteps__right col col-6">
-                  <h2 class="isteps__title title">Как мы<br >работаем
+                  <h2 class="isteps__title title">Как мы <br>работаем
                   </h2>
                   <div class="isteps__text">
                     <div class="text">
@@ -474,12 +505,66 @@
             <div class="footer__center">
               <address class="footer__address">Челябинск, улица Осипенко, дом 3, офис 2
               </address><a class="footer__phone" href="tel:83517502541">+7 351 750-25-41</a>
-            </div><a class="footer__developer" href="https://www.dextra.ru" target="_blank">dextra<span>Разработка сайта</span></a>
+            </div><a class="footer__developer" href="https://www.dextra.ru" target="_blank"> <span>Dextra</span> Разработка сайта</a>
           </div>
         </div>
       </footer>
     </div>
-    <div class="hidden-block"></div>
+    <div class="hidden-block">
+      <div class="popup popup--feedback mfp-hide" id="feedback">
+        <div class="popup__container">
+          <h3 class="popup__title title">Остались вопросы?
+          </h3>
+          <form class="form">
+            <p class="form__text">Обратите внимание, поля со звездочкой <span class="red">*</span> обязательны для заполнения.
+            </p>
+            <div class="form__row">
+              <div class="form__col">
+                <div class="form__field">
+                  <label class="form__field-label" for="inp_04">Ваше имя <span class="red">*</span>
+                  </label><input class="form__field-input" type="text" id="inp_04" data-req="req" value="Александр"/>
+                </div>
+                <div class="form__field">
+                  <label class="form__field-label" for="inp_05">Электронная почта <span class="red">*</span>
+                  </label><input class="form__field-input" type="email" id="inp_05" data-req="req" data-type="email"/>
+                </div>
+                <div class="form__field">
+                  <label class="form__field-label" for="inp_06">Телефон
+                  </label><input class="form__field-input js-phone js-digits" type="text" id="inp_06"/>
+                </div>
+              </div>
+              <div class="form__col">
+                <div class="form__field">
+                  <label class="form__field-label" for="text_02">Текст вопроса <span class="red">*</span>
+                  </label><textarea class="form__field-textarea" data-req="req" id="text_02"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="checkbox"><input class="checkbox__input" type="checkbox" id="agreement2" data-req="agreement"/>
+                <label class="checkbox__label" for="agreement2">Даю согласие на обработку <a href="#">персональных данных</a>
+                </label>
+              </div>
+            </div>
+            <div class="form__row">
+              <button class="form__submit btn"><span class="btn__title">Отправить вопрос</span><span class="btn__video-wrap">
+                  <video class="btn__video-item" autoplay muted="muted" preload="auto" playsinline="" loop="loop" poster="static/video/video-btn-poster.jpg">
+                    <source src="static/video/video-btn.mp4" type="video/mp4">
+                  </video></span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="popup popup--success mfp-hide" id="success">
+        <div class="popup__container">
+          <h3 class="popup__title title">Спасибо, Ваша заявка успешно отправлена!
+          </h3>
+          <p class="popup__text">Наш менеджер с Вами свяжется в ближайшее время.
+          </p>
+        </div>
+      </div>
+    </div>
     <script type="text/javascript" src="static/js/vendor.js"></script>
     <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script type="text/javascript" src="static/js/own.js"></script>

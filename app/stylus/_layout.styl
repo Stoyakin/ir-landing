@@ -31,10 +31,8 @@ body
     touch-action none
 
   &.open-menu
-    .main
-      &:after
-        opacity 1
-        visibility visible
+    .header
+      box-shadow 0 0 35px rgba(0,0,0,0.15)
 
   &.page-loaded
     .wrapper, .header, .main, .footer
@@ -49,4 +47,3 @@ body
   width 100%
   min-height 100vh
   overflow-x hidden
-  z-index 1

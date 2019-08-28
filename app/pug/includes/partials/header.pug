@@ -3,4 +3,11 @@
     +b('a')(href="/").logo
       +e('img')(src=baseSrc+"logo.png" alt="Ителлектуальеные решения").img
     +e('a')(href="tel:83517502541").phone +7 351 750-25-41
-    +video-btn('Задать вопрос юристу')(class="header__btn")
+    +video-btn('Задать вопрос юристу')(class="header__btn js-mfp" href="#feedback")
+    +e('button')(type="button").burger.js-burger
+      +e.burger-line
+      +e.burger-video
+        +e('video')(autoplay muted="muted" preload="auto" playsinline="" loop="loop" poster="static/video/video-btn-poster.jpg").burger-video-item
+          source(src="static/video/video-btn.mp4" type="video/mp4")
+          
+

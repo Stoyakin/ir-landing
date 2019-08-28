@@ -1,29 +1,43 @@
 .ireview
   background-color #fbfbfb
   padding 90px 0 100px
+  @media $desktopMax
+    padding 62px 0 70px
   .center
     text-align center
   &__title
     margin-bottom 31px
   &__carousel
     margin-bottom 52px
+    @media $desktopMax
+      margin-bottom 41px
   &__item
     background-color white
     max-width 948px
     min-height 312px
     padding 36px 50px
+    @media $desktopMax
+      min-height 301px
+    @media $mLandscapeMax
+      padding 25px 30px
     &-author
       color $black
       font-size 18px
       font-weight 600
       line-height 22px
       margin-bottom 17px
+      @media $desktopMax
+        font-size 17px
+        line-height 21px
     &-text
       p, ul li
         color #010101
         font-size 16px
         font-weight 400
         line-height 20px
+        @media $desktopMax
+          font-size 15px
+          line-height 19px
     &-date
       display block
       color #9d9d9d
@@ -31,11 +45,20 @@
       font-weight 400
       line-height 20px
       margin-top 17px
+      @media $desktopMax
+        font-size 15px
+        line-height 19px
   .swiper
     // &-container
     // &-wrapper
     &-slide
       width 948px
+      @media $desktopMax
+        width 856px
+      @media $tPortraitMax
+        width calc(100vw - 180px)
+      @media $mLandscapeMax
+        width calc(100vw - 60px)
     &-buttons
       position absolute
       left 50%
@@ -44,6 +67,12 @@
       width 1002px
       height 0
       z-index 1
+      @media $desktopMax
+        width 912px
+      @media $tPortraitMax
+        width calc(100vw - 130px)
+      @media $mLandscapeMax
+        width calc(100vw - 5px)
     &-button
       &-prev, &-next
         position absolute

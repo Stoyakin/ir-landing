@@ -4,8 +4,21 @@
   left 0
   top 0
   z-index 1
-  background-color #fff
   padding 30px 43px
+  transition box-shadow  .4s
+  @media $desktopMax
+    padding 20px 34px
+  @media (max-width: 1239px)
+    position fixed
+    left 0
+    top 0
+    width 100%
+    padding 10px 20px
+    z-index 11
+  @media (max-width: 1239px)
+    background-color #fff
+  &.fixed
+    box-shadow 0 0 35px rgba(0, 0, 0, 0.15)
   &__row
     justify-content space-between
     align-items center
@@ -16,3 +29,69 @@
     line-height 24px
     margin-left auto
     margin-right 24px
+    @media $desktopMax
+      font-size 18px
+    @media $mLandscapeMax
+      margin-right 0
+    @media $mPortraitMax
+      display none
+  &__btn
+    @media $mLandscapeMax
+      display none
+
+  &__burger
+    display none
+    align-items center
+    justify-content center
+    flex-shrink 0
+    position relative
+    background none
+    width 40px
+    height 40px
+    margin-left 25px
+    border-radius 20px
+    overflow hidden
+    z-index 1
+    &.active
+      .header__burger-line
+        background-color transparent
+        &:after, &:before
+          transition transform .3s ease-in-out .3s, top .3s ease-in-out 0s, bottom .3s ease-in-out 0s
+        &:before
+          top 0
+          transform rotate(45deg)
+        &:after
+          bottom 0
+          transform rotate(-45deg)
+    &:focus
+      outline none
+    @media (max-width: 1239px)
+      display flex
+    &-line
+      position relative
+      width 22px
+      height 2px
+      background-color #fff
+      &:before, &:after
+        content ''
+        position absolute
+        left 0
+        width 22px
+        height 2px
+        background-color #fff
+        transition transform .3s ease-in-out 0s, top .3s ease-in-out .3s, bottom .3s ease-in-out .3s
+      &:before
+        top -6px
+      &:after
+        bottom -6px
+    &-video
+      position absolute
+      left 0
+      top 0
+      width 100%
+      height 100%
+      z-index -1
+      &-item
+        left 50%
+        transform translateX(-50%)
+        height 100%

@@ -1,13 +1,25 @@
 .icontacts
   padding 100px 0
   background-color #fff
+  @media $desktopMax
+    padding 70px 0
   &__row
     justify-content space-between
     align-items center
+  &__left, &__right
+    @media $mLandscapeMax
+      width 100%
+  &__left
+    @media $mLandscapeMax
+      margin-bottom 60px
   &__map
     width 100%
     height 680px
     background-color #fff
+    @media $desktopMax
+      height 630px
+    @media $mLandscapeMax
+      height 300px
   &__title
     margin-bottom 27px
   &__items
@@ -22,6 +34,9 @@
       font-weight 600
       line-height 22px
       margin-bottom 12px
+      @media $desktopMax
+        font-size 17px
+        line-height 21px
     &-data
       display flex
       flex-direction column
@@ -29,6 +44,9 @@
       font-size 16px
       font-weight 400
       line-height 20px
+      @media $desktopMax
+        font-size 15px
+        line-height 19px
       address
         display block
       p, address

@@ -388,6 +388,43 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     },
 
+    anchors: function anchors() {
+
+      function isInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+        return (rect.top <= windowHeight*.65);
+      }
+
+      qsAll('.js-anchors').forEach((item)=> {
+        item.addEventListener('click', function(e) {
+          let data = this.dataset.anchors,
+            corr = window.innerWidth > 1239 ? qs('.inav').offsetHeight : qs('.header').offsetHeight;
+          window.innerWidth < 1240 ? qs('.js-burger').click(): '';
+          if (qs(`[data-anchors-items="${data}"]`)) {
+            window.scrollBy({
+              top: qs(`[data-anchors-items="${data}"]`).getBoundingClientRect().top - corr,
+              left: 0,
+              behavior: 'smooth'
+            });
+          }
+          e.preventDefault();
+        })
+      });
+
+      window.addEventListener('scroll', ()=>{
+        qsAll('[data-anchors-items]').forEach((item)=> {
+          if (isInViewport(item)) {
+            if (!qs(`.nav__list-item-href--active[data-anchors="${item.dataset.anchorsItems}"]`)) {
+              qs('.nav__list-item-href.nav__list-item-href--active').classList.remove('nav__list-item-href--active');
+              qs(`[data-anchors="${item.dataset.anchorsItems}"]`).classList.add('nav__list-item-href--active');
+            }
+          }
+        });
+      });
+
+    },
+
     init: function init() {
 
       const _self = this;
@@ -404,10 +441,39 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
       if (qs('.js-burger')) this.burger();
 
+      if (qs('.js-anchors')) this.anchors();
+
       if ($('.js-mfp').length) {
         $('.js-mfp').magnificPopup({
             type: 'inline',
-            midClick: true
+            midClick: true,
+            callbacks: {
+              open: function() {
+                qs('body').classList.add('mfp-open');
+              },
+              close: function() {
+                qs('body').classList.remove('mfp-open');
+              }
+            }
+        });
+      }
+
+      if ($('.js-mfp-youtube').length){
+        $('.js-mfp-youtube').magnificPopup({
+          disableOn: 700,
+          type: 'iframe',
+          mainClass: 'mfp-fade',
+          removalDelay: 160,
+          preloader: false,
+          fixedContentPos: true,
+          callbacks: {
+            open: function() {
+              qs('body').classList.add('mfp-open');
+            },
+            close: function() {
+              qs('body').classList.remove('mfp-open');
+            }
+          }
         });
       }
 

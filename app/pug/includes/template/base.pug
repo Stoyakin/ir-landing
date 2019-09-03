@@ -9,6 +9,16 @@ html(lang="ru")
     include ../partials/head
 
   body
+    .preloader
+      .preloader__circle
+        .preloader__circle-item
+        .preloader__circle-item
+        .preloader__circle-item
+        
+    +b('section').video-back
+      +e('video')(autoplay muted="muted" preload="auto" playsinline="" loop="loop" poster="static/video/video-back-poster.jpg").item
+        source(src="static/video/video-back.mp4" type="video/mp4")
+    
     .wrapper
       block header
         include ../partials/header

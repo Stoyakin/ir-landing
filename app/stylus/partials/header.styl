@@ -13,7 +13,7 @@
     left 0
     top 0
     width 100%
-    padding 10px 20px
+    padding 15px 20px
     z-index 11
   @media (max-width: 1239px)
     background-color #fff
@@ -29,16 +29,18 @@
     line-height 24px
     margin-left auto
     margin-right 24px
+    transition opacity .4s
     @media $desktopMax
       font-size 18px
     @media $mLandscapeMax
       margin-right 0
     @media $mPortraitMax
       display none
+    &:hover
+      opacity .7
   &__btn
     @media $mLandscapeMax
       display none
-
   &__burger
     display none
     align-items center
@@ -49,49 +51,51 @@
     width 40px
     height 40px
     margin-left 25px
-    border-radius 20px
+    background none
     overflow hidden
     z-index 1
+    &:hover
+      span
+        &:before, &:after
+          transition top .25s, bottom .25s
+        &:before
+          top -8px
+        &:after
+          bottom -8px
     &.active
-      .header__burger-line
+      span
         background-color transparent
         &:after, &:before
-          transition transform .3s ease-in-out .3s, top .3s ease-in-out 0s, bottom .3s ease-in-out 0s
+          transition transform .25s ease-in-out .25s, top .25s ease-in-out 0s, bottom .25s ease-in-out 0s
         &:before
           top 0
           transform rotate(45deg)
         &:after
           bottom 0
           transform rotate(-45deg)
+      &:hover
+        span
+          &:after, &:before
+            transition transform .25s ease-in-out .25s, top .25s ease-in-out 0s, bottom .25s ease-in-out 0s
     &:focus
       outline none
     @media (max-width: 1239px)
       display flex
-    &-line
+    span
+      display block
       position relative
       width 22px
       height 2px
-      background-color #fff
+      background-color #000
       &:before, &:after
         content ''
         position absolute
         left 0
         width 22px
         height 2px
-        background-color #fff
-        transition transform .3s ease-in-out 0s, top .3s ease-in-out .3s, bottom .3s ease-in-out .3s
+        background-color #000
+        transition transform .25s ease-in-out 0s, top .25s ease-in-out .25s, bottom .25s ease-in-out .25s
       &:before
         top -6px
       &:after
         bottom -6px
-    &-video
-      position absolute
-      left 0
-      top 0
-      width 100%
-      height 100%
-      z-index -1
-      &-item
-        left 50%
-        transform translateX(-50%)
-        height 100%

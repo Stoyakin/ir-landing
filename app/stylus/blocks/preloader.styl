@@ -1,0 +1,48 @@
+@keyframes animate-circle
+  from
+    transform scale(0)
+    opacity 1
+  to
+    transform scale(1)
+    opacity 0
+
+.preloader
+  position fixed
+  width 100%
+  height 100%
+  display flex
+  align-items center
+  justify-content center
+  background-color #fff
+  transition opacity .4s ease-in-out, visibility .4s ease-in-out
+  z-index 1
+  &:before
+    content ''
+    display inline-block
+    vertical-align top
+    position relative
+    width 115px
+    height 54px
+    background url('../../../../static/img/prl.png') no-repeat center
+    z-index 2
+  &__circle
+    position: absolute
+    top 50%
+    left 50%
+    height 10rem
+    width 10rem
+    transform translateX(-50%) translateY(-50%)
+    &-item
+      position absolute
+      height inherit
+      width inherit
+      background: rgba(#1e92ca, .5)
+      border-radius 50%
+      animation animate-circle 2s cubic-bezier(.9,.24,.62,.79) infinite
+      &:nth-of-type(1)
+        animation-delay 0s
+      &:nth-of-type(2)
+        animation-delay calc(2s / -3)
+      &:nth-of-type(3)
+        animation-delay calc(2s / -6)
+

@@ -2,20 +2,20 @@
   +e.row.row
     +e.left
       +b('a')(href="/").logo
-        +e('img')(src=baseSrc+"logo2.png" alt="Ителлектуальеные решения").img
+        +e('img')(src=baseSrc+"logo2.png" alt="Интеллектуальные решения").img
     +e.center
       +b('nav').nav
         +e('ul').list
           +e('li').list-item
-            +e('a')(href="#").list-item-href.--active Преимущества
+            +e('a')(href="#" data-anchors="01").list-item-href.--active.js-anchors Преимущества
           +e('li').list-item
-            +e('a')(href="#").list-item-href Услуги
+            +e('a')(href="#" data-anchors="02").list-item-href.js-anchors Услуги
           +e('li').list-item
-            +e('a')(href="#").list-item-href Как мы работаем
+            +e('a')(href="#" data-anchors="03").list-item-href.js-anchors Как мы работаем
           +e('li').list-item
-            +e('a')(href="#").list-item-href Чем мы отличаемся
+            +e('a')(href="#" data-anchors="04").list-item-href.js-anchors Чем мы отличаемся
           +e('li').list-item
-            +e('a')(href="#").list-item-href Отзывы
+            +e('a')(href="#" data-anchors="05").list-item-href.js-anchors Отзывы
     +e.right
       +e('a')(href="tel:83517502541").phone +7 351 750-25-41
-      +video-btn('Задать вопрос юристу')(class="inav__btn")
+      +video-btn('Задать вопрос юристу')(class="inav__btn js-mfp" href="#feedback")

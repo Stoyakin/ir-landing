@@ -20,6 +20,8 @@
       min-height 301px
     @media $mLandscapeMax
       padding 25px 30px
+    @media $mPortraitMax
+      padding 25px 20px
     &-author
       color $black
       font-size 18px
@@ -59,6 +61,8 @@
         width calc(100vw - 180px)
       @media $mLandscapeMax
         width calc(100vw - 60px)
+      @media $mPortraitMax
+        width calc(100vw - 30px)
     &-buttons
       position absolute
       left 50%
@@ -73,16 +77,26 @@
         width calc(100vw - 130px)
       @media $mLandscapeMax
         width calc(100vw - 5px)
+      @media $mPortraitMax
+        width calc(100vw + 10px)
     &-button
       &-prev, &-next
         position absolute
       &-prev
         left 0
+        &:before
+          @media $tPortraitMax
+            transform rotate(45deg) scale(0.8)
         &:hover
           &:before
-            transform rotate(45deg) scale(1.45)
+            @media $tLandscape
+              transform rotate(45deg) scale(1.45)
       &-next
         right 0
+        &:before
+          @media $tPortraitMax
+            transform rotate(-135deg) scale(0.8)
         &:hover
           &:before
-            transform rotate(-135deg) scale(1.45)
+            @media $tLandscape
+              transform rotate(-135deg) scale(1.45)

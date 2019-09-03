@@ -9,6 +9,7 @@ a
 
 html
   font-size $baseFontSize
+  margin-right 0 !important
 
 html, body, .wrapper
   position relative
@@ -35,8 +36,21 @@ body
       box-shadow 0 0 35px rgba(0,0,0,0.15)
 
   &.page-loaded
+    .preloader
+      opacity 0
+      visibility hidden
     .wrapper, .header, .main, .footer
       opacity 1
+
+  &.page-loaded.mfp-open,
+  &.mfp-open
+    .wrapper
+      padding-right 17px
+    .preloader
+      opacity 0
+      visibility hidden
+    .wrapper, .header, .main, .footer
+      opacity 0
 
 .wrapper, .header, .main, .footer
   opacity 0
@@ -47,3 +61,4 @@ body
   width 100%
   min-height 100vh
   overflow-x hidden
+  transition right .4s
